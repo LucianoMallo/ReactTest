@@ -23,6 +23,6 @@ const Series = () => {
       ))}
     </Container>
   )
-};
+}
 
 export default Series
