@@ -4,10 +4,10 @@ body {
   margin: 0;
 }
 
-.App-header{
+.App-header {
   display: flex;
   justify-content: center;
-  padding-left: 10px;
+  padding: 10px;
   text-align: center;
   background-color: wheat;
 }
@@ -20,25 +20,12 @@ body {
 
 .content {
   flex: 1;
-  margin: 5%;
+  margin: 2%;
 }
-.content button{
-  margin: 5%;
-}
-.App-nav {
-  display: flex;
-  justify-content: center;
-  padding-left: 10px;
-  text-align: center;
-  background-color: wheat;
+.content button {
+  margin: 2%;
 }
 
-.App-nav div {
-  margin-left: 20px;
-}
-.App-nav div a:visited {
-  color: black;
-}
 .App-footer {
   background-color: black;
   color: wheat;
@@ -48,4 +35,21 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .App-header,
+  .App-nav {
+    padding: 5px;
+  }
+
+  .content,
+  .content button {
+    margin: 1%;
+  }
+
+  .App-footer {
+    padding: 30px;
+  }
 }

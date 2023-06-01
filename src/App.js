@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import TitlesContainer from './components/container/container'
 import './App.css'
 import Series from './components/series/series'
@@ -16,18 +16,6 @@ const App = () => {
           <div className='Login'>Log in</div>
           <div className='Trial'>Start your free trial</div>
         </header>
-        <nav className='App-nav'>
-          <div>
-            <Link to='/'>Home</Link>
-          </div>
-          <div>
-            <Link to='/series'>Series</Link>
-          </div>
-          <div>
-            <Link to='/movies'>Movies</Link>
-          </div>
-        </nav>
-
         <div className='content'>
           <Routes>
             <Route path='/' element={<TitlesContainer />} />
@@ -40,11 +28,9 @@ const App = () => {
           <div className='Contact'>
             Home | Terms and Conditions | Privacy Policies | Collections Statement | Help | Manage Account
           </div>
-          <div className='all rights'>Copyright 2016 DEMO Streaming All Right Reserved </div>
+          <div className='allRights'>Copyright 2016 DEMO Streaming All Right Reserved </div>
           <SocialContainers className='social-media' />
           <StoresContainers className='stores-containers' />
-
-          <div className='stores-banners' />
         </footer>
       </div>
 
