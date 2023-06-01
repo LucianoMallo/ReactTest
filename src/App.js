@@ -1,28 +1,32 @@
-import './App.css'
+import React from 'react'
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
 import TitlesContainer from './components/container/container'
-import { HashRouter as Router, Routes, Route, Link } from 'react-router-dom'
 import Series from './components/series/series'
+// import Movies from './Movies';
 
-function App () {
+const App = () => {
   return (
-    <div>
-      <header className='App-header'>
-        <div>Demo Streaming</div>
-        <div>Log in</div>
-        <div>Start your free trial</div>
-      </header>
-      <Router>
-        <Link to='/Series'><TitlesContainer /></Link>
+    <Router>
+      <div>
+        <nav>
+          <ul>
+            <li>
+              <Link to='/'>Home</Link>
+            </li>
+            <li>
+              <Link to='/series'>Series</Link>
+            </li>
+            {/* Add more navigation links for other routes if needed */}
+          </ul>
+        </nav>
+
         <Routes>
-          <Route exact path='/Series' element={<Series />} />
+          <Route path='/' element={<TitlesContainer />} />
+          <Route path='/series' element={<Series />} />
+          {/* Add more routes for other components if needed */}
         </Routes>
-      </Router>
-
-      <footer className='App-footer'>
-        Home | Terms and Conditions | Privacy Policies | Collections Statement | Help | Manage Account
-      </footer>
-    </div>
-
+      </div>
+    </Router>
   )
 }
 

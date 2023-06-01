@@ -1,47 +1,35 @@
 import styled from '@emotion/styled'
 
-export const Frame = styled.div`
-height: fit-content;
-box-sizing: border-box;
-background: rgba(217, 217, 217, 0.58);
-border: 1px solid white;
-box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
-backdrop-filter: blur(6px);
-text-align: center;
-cursor: pointer;
-transition: all 0.5s;
-display: flex;
-align-items: center;
-justify-content: center;
-user-select: none;
-font-weight: bolder;
-float:left;
-min-height:269px;
-min-width:165px;
+export const Container = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+`
 
-display: flex; 
-flex-wrap:wrap;
-:hover{
-    border: 1px solid black;
-    transform: scale(0.98);
-}
+export const Frame = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  width: 20%;
 `
+
 export const PhotoOfTitle = styled.img`
-display: block; 
-width:50%;
-min-width:130px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
 `
+
 export const Data = styled.div`
-display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: center;
+  text-align: center;
 `
-export const Title = styled.p`
-text-align: justify;
+
+export const Title = styled.h3`
+  font-size: 16px;
+  margin: 0;
 `
+
 export const Description = styled.p`
-line-break: auto;
-text-align: justify;
-position: relative;
+  font-size: 14px;
+  margin: 0;
 `

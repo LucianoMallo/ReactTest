@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 
-export const Frame = styled.div`
+export const Frame = styled.button`
 width: 100%;
 box-sizing: border-box;
 background: black;
